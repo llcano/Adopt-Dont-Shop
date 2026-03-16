@@ -16,12 +16,14 @@ body {
     background-color: #ADD8E6;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain; /* Ensures the whole image is visible */
+    background-size: contain; /* Or 'cover' if you want it to fill the box */
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 20px auto;
     font-size: 1.5rem;
+    /* Ensure the background image is not obscured */
+    background-origin: border-box; 
 }
 
 /* The gallery container takes up 25% of the screen */
