@@ -1,3 +1,27 @@
+header {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centers the H1 title */
+    align-items: center;
+    padding: 10px 0;
+}
+
+#logo {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%); /* Perfectly centers logo vertically relative to header */
+    height: 60px;                /* Adjust size as needed */
+    width: auto;
+    border-radius: 50%;          /* Optional: makes the logo circular */
+    border: 2px solid pink;
+}
+
+h1 {
+    margin: 0;
+    font-family: sans-serif;
+}
 /* Ensure the total page height is exactly the screen height */
 body {
     margin: 0;
