@@ -1,26 +1,26 @@
 header {
     width: 100%;
     position: relative;
+    padding: 20px 0;
     display: flex;
-    justify-content: center; /* Centers the H1 title */
+    justify-content: center; /* Keeps the H1 centered */
     align-items: center;
-    padding: 10px 0;
 }
 
 #logo {
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%); /* Perfectly centers logo vertically relative to header */
-    height: 60px;                /* Adjust size as needed */
-    width: auto;
-    border-radius: 50%;          /* Optional: makes the logo circular */
-    border: 2px solid pink;
+    position: absolute; /* Removes logo from the central flow */
+    top: 10px;          /* Distance from the top */
+    left: 10px;         /* Distance from the left */
+    width: 80px;        /* Constrains the size */
+    height: 80px;       /* Keeps it proportional */
+    object-fit: contain;
+    border: none;       /* Removes any unwanted borders */
 }
 
 h1 {
     margin: 0;
-    font-family: sans-serif;
+    font-size: 2rem;
+    text-align: center;
 }
 /* Ensure the total page height is exactly the screen height */
 body {
