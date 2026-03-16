@@ -1,0 +1,27 @@
+#image {
+    width: 300px;
+    height: 300px;
+    border: 5px solid pink;
+    margin: 0 auto;
+    background-color: #ADD8E6;
+    background-image: url('');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    line-height: 300px; /* Adjusted for better centering */
+    color: #000000; /* Darker text for contrast validation */
+    font-size: 100%;
+    margin-bottom: 10px;
+}
+
+.preview {
+    width: 15%;
+    margin: 1%;
+    border: 2px solid pink;
+}
+
+/* Necessary for axe/WAVE visible focus indicator */
+.preview:focus {
+    outline: 4px solid #0000FF;
+}
