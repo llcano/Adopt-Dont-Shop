@@ -1,27 +1,42 @@
+/* Container for the small preview images */
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 30vh; /* Limits the row to 30% of screen height */
+    margin-top: 10px;
+}
+
+/* Updated Preview Class */
+.preview {
+    width: auto;
+    height: 100%;    /* Scales to fit the 30vh container */
+    max-width: 15vw; /* Ensures it doesn't get too wide */
+    object-fit: cover;
+    border: 2px solid pink;
+    cursor: pointer;
+}
+
+/* The Main Display Image */
 #image {
-    width: 300px;
-    height: 300px;
-    border: 5px solid pink;
+    width: 80vw;      /* 80% of viewport width */
+    height: 50vh;     /* 50% of viewport height */
+    max-width: 600px;
     margin: 0 auto;
+    border: 5px solid pink;
     background-color: #ADD8E6;
-    background-image: url('');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain; /* 'contain' ensures the full image is visible */
     background-position: center;
-    text-align: center;
-    line-height: 300px; /* Adjusted for better centering */
-    color: #000000; /* Darker text for contrast validation */
-    font-size: 100%;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 10px;
 }
 
-.preview {
-    width: 15%;
-    margin: 1%;
-    border: 2px solid pink;
-}
-
-/* Necessary for axe/WAVE visible focus indicator */
+/* Accessibility Focus */
 .preview:focus {
     outline: 4px solid #0000FF;
 }
