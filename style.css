@@ -11,16 +11,17 @@ body {
 /* The main display box takes up 50% of the screen */
 #image {
     width: 90%;
-    height: 50vh; 
+    height: 50vh;
     border: 5px solid pink;
     background-color: #ADD8E6;
-    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain; /* Ensures the whole image is visible */
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px 0;
+    margin: 20px auto;
+    font-size: 1.5rem;
 }
 
 /* The gallery container takes up 25% of the screen */
