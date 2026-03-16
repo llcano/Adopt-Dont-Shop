@@ -1,51 +1,20 @@
-/* Function: upDate
-Logic: Changes the text and background image of the #image div.
-*/
 function upDate(previewPic) {
     const display = document.getElementById('image');
     
-    // 1. Update text content with the alt attribute of the hovered image
+    // Update Text
     display.innerHTML = previewPic.alt;
     
-    // 2. Update background image with the src of the hovered image
+    // Update Background Image with proper string concatenation
     display.style.backgroundImage = "url('" + previewPic.src + "')";
     
-    console.log("Display updated to:", previewPic.alt);
+    // Debugging: Check console (F12) to see if this triggers
+    console.log("Source path: " + previewPic.src);
 }
 
-/* Function: unDo
-Logic: Resets the #image div to its original state.
-*/
 function unDo() {
     const display = document.getElementById('image');
     
-    // 1. Reset background to empty
+    // Reset background and text
     display.style.backgroundImage = "url('')";
-    
-    // 2. Reset text to original message
     display.innerHTML = "Hover over an image below to display here.";
-    
-    console.log("Display reverted to default.");
 }
-
-/* Function: Accessibility Listeners
-Logic: Links focus/blur events to the upDate/unDo logic for keyboard users.
-*/
-function onFocus(previewPic) {
-    upDate(previewPic);
-}
-
-function onBlur() {
-    unDo();
-}
-
-/* Initialization: 
-Ensures all images are keyboard-accessible (WAVE requirement).
-*/
-window.onload = function() {
-    console.log("Initializing tabindex for accessibility.");
-    const images = document.querySelectorAll(".preview");
-    for (let i = 0; i < images.length; i++) {
-        images[i].setAttribute("tabindex", "0");
-    }
-};
